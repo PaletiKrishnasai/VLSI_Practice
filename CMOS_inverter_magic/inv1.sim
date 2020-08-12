@@ -1,0 +1,12 @@
+| units: 100 tech: scmos format: MIT
+p vin vdd vout 2 6 9 4
+n vin gnd vout 2 5 9 -19
+C gnd GND 3.4
+R gnd 649
+C vout GND 3.5
+R vout 178
+C vin GND 6.1
+R vin 404
+C vdd GND 3.9
+R vdd 491
+R w_n6_1# 7290
