@@ -1,0 +1,16 @@
+* SPICE3 file created from nor.ext - technology: scmos
+
+.option scale=1u
+
+M1000 a_n14_6# A vdd w_n26_4# pfet w=8 l=3
++  ad=64 pd=32 as=56 ps=30
+M1001 out B a_n14_6# w_n26_4# pfet w=8 l=3
++  ad=56 pd=30 as=0 ps=0
+M1002 out A gnd Gnd nfet w=8 l=3
++  ad=64 pd=32 as=112 ps=60
+M1003 gnd B out Gnd nfet w=8 l=3
++  ad=0 pd=0 as=0 ps=0
+C0 gnd gnd! 3.9fF
+C1 out gnd! 7.0fF
+C2 vdd gnd! 3.5fF
+C3 w_n26_4# gnd! 3.2fF
