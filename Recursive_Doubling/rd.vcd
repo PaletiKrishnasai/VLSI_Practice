@@ -1,0 +1,49 @@
+$date
+	Wed Sep  9 18:51:47 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module top $end
+$var wire 32 ! sum [32:1] $end
+$var wire 1 " cout $end
+$var reg 32 # a [32:1] $end
+$var reg 32 $ b [32:1] $end
+$var reg 1 % cin $end
+$scope module rd $end
+$var wire 32 & a [32:1] $end
+$var wire 32 ' b [32:1] $end
+$var wire 1 % cin $end
+$var wire 32 ( sum [32:1] $end
+$var wire 32 ) gk [32:1] $end
+$var wire 1 " cout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 )
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10
+b11111000111000111000111000111000 !
+b11111000111000111000111000111000 (
+b11111000111000111000111000111000 #
+b11111000111000111000111000111000 &
+#30
+1"
+b11111000111000111000111111111000 )
+b11110001110001110001000000010011 !
+b11110001110001110001000000010011 (
+b11111000111000111000000111011011 $
+b11111000111000111000000111011011 '
