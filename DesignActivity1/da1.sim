@@ -1,0 +1,39 @@
+p a Vdd out0 2 4
+n a Gnd out0 2 4
+
+p nand1 Vdd out1 2 4
+n nand1 Gnd out1 2 4
+
+p b Vdd nand1 2 4
+p out0 Vdd nand1 2 4
+n b nand1 b_nand_out0_int 2 4
+n out0 b_nand_out0_int Gnd 2 4
+
+p nand1 Vdd out1 2 4
+n nand1 Gnd out1 2 4
+
+p b Vdd out2 2 4
+n b Gnd out2 2 4
+
+p nand3 Vdd out3 2 4
+n nand3 Gnd out3 2 4
+
+p a Vdd nand3 2 4
+p out2 Vdd nand3 2 4
+n a nand3 a_nand_out2_int 2 4
+n out2 a_nand_out2_int Gnd 2 4
+
+p nand3 Vdd out3 2 4
+n nand3 Gnd out3 2 4
+
+p nor4 Vdd out4 2 4
+n nor4 Gnd out4 2 4
+
+p out3 Vdd out3_nor_out1_int 2 4
+p out1 out3_nor_out1_int nor4 2 4
+n out3 nor4 Gnd 2 4
+n out1 nor4 Gnd 2 4
+
+p nor4 Vdd out4 2 4
+n nor4 Gnd out4 2 4
+
