@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/paleti/VLSI_LAB/ParityGenerator/ParityGen_ise/parityeven.xst" -ofn "/home/paleti/VLSI_LAB/ParityGenerator/ParityGen_ise/parityeven.syr" 

@@ -1,0 +1,2 @@
+verilog work "../pg8bit.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

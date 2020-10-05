@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/paleti/VLSI_LAB/ParityGenerator/ParityGen_ise/parityeven_isim_beh.exe" -prj "/home/paleti/VLSI_LAB/ParityGenerator/ParityGen_ise/parityeven_beh.prj" "work.parityeven" "work.glbl" 

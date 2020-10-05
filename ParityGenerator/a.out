@@ -1,0 +1,120 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x5636a7b6df00 .scope module, "top" "top" 2 3;
+ .timescale 0 0;
+v0x5636a7b986f0_0 .var "a", 8 1;
+v0x5636a7b987e0_0 .net "parity", 0 0, L_0x5636a7b99b60;  1 drivers
+S_0x5636a7b6d600 .scope module, "final" "parityeven" 2 8, 3 3 0, S_0x5636a7b6df00;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "parity"
+    .port_info 1 /INPUT 8 "a"
+v0x5636a7b98410_0 .net "a", 8 1, v0x5636a7b986f0_0;  1 drivers
+v0x5636a7b984f0_0 .net "parity", 0 0, L_0x5636a7b99b60;  alias, 1 drivers
+v0x5636a7b985e0_0 .net "w", 6 1, L_0x5636a7b99730;  1 drivers
+L_0x5636a7b989a0 .part v0x5636a7b986f0_0, 0, 1;
+L_0x5636a7b98ae0 .part v0x5636a7b986f0_0, 1, 1;
+L_0x5636a7b98c40 .part v0x5636a7b986f0_0, 2, 1;
+L_0x5636a7b98d30 .part v0x5636a7b986f0_0, 3, 1;
+L_0x5636a7b98ea0 .part v0x5636a7b986f0_0, 4, 1;
+L_0x5636a7b98f90 .part v0x5636a7b986f0_0, 5, 1;
+L_0x5636a7b99130 .part v0x5636a7b986f0_0, 6, 1;
+L_0x5636a7b99220 .part v0x5636a7b986f0_0, 7, 1;
+L_0x5636a7b99400 .part L_0x5636a7b99730, 0, 1;
+L_0x5636a7b994f0 .part L_0x5636a7b99730, 1, 1;
+LS_0x5636a7b99730_0_0 .concat8 [ 1 1 1 1], L_0x5636a7b988d0, L_0x5636a7b98bd0, L_0x5636a7b98e00, L_0x5636a7b990c0;
+LS_0x5636a7b99730_0_4 .concat8 [ 1 1 0 0], L_0x5636a7b99360, L_0x5636a7b99690;
+L_0x5636a7b99730 .concat8 [ 4 2 0 0], LS_0x5636a7b99730_0_0, LS_0x5636a7b99730_0_4;
+L_0x5636a7b99960 .part L_0x5636a7b99730, 2, 1;
+L_0x5636a7b99ac0 .part L_0x5636a7b99730, 3, 1;
+L_0x5636a7b99bd0 .part L_0x5636a7b99730, 4, 1;
+L_0x5636a7b99d40 .part L_0x5636a7b99730, 5, 1;
+S_0x5636a7b71d10 .scope module, "b12" "pg2bit" 3 9, 4 1 0, S_0x5636a7b6d600;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "result"
+    .port_info 1 /INPUT 1 "a"
+    .port_info 2 /INPUT 1 "b"
+L_0x5636a7b988d0 .functor XOR 1, L_0x5636a7b989a0, L_0x5636a7b98ae0, C4<0>, C4<0>;
+v0x5636a7b6ce30_0 .net "a", 0 0, L_0x5636a7b989a0;  1 drivers
+v0x5636a7b96460_0 .net "b", 0 0, L_0x5636a7b98ae0;  1 drivers
+v0x5636a7b96520_0 .net "result", 0 0, L_0x5636a7b988d0;  1 drivers
+S_0x5636a7b96640 .scope module, "b14" "pg2bit" 3 14, 4 1 0, S_0x5636a7b6d600;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "result"
+    .port_info 1 /INPUT 1 "a"
+    .port_info 2 /INPUT 1 "b"
+L_0x5636a7b99360 .functor XOR 1, L_0x5636a7b99400, L_0x5636a7b994f0, C4<0>, C4<0>;
+v0x5636a7b96860_0 .net "a", 0 0, L_0x5636a7b99400;  1 drivers
+v0x5636a7b96940_0 .net "b", 0 0, L_0x5636a7b994f0;  1 drivers
+v0x5636a7b96a00_0 .net "result", 0 0, L_0x5636a7b99360;  1 drivers
+S_0x5636a7b96b20 .scope module, "b18" "pg2bit" 3 17, 4 1 0, S_0x5636a7b6d600;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "result"
+    .port_info 1 /INPUT 1 "a"
+    .port_info 2 /INPUT 1 "b"
+L_0x5636a7b99b60 .functor XOR 1, L_0x5636a7b99bd0, L_0x5636a7b99d40, C4<0>, C4<0>;
+v0x5636a7b96d40_0 .net "a", 0 0, L_0x5636a7b99bd0;  1 drivers
+v0x5636a7b96e00_0 .net "b", 0 0, L_0x5636a7b99d40;  1 drivers
+v0x5636a7b96ec0_0 .net "result", 0 0, L_0x5636a7b99b60;  alias, 1 drivers
+S_0x5636a7b96fe0 .scope module, "b34" "pg2bit" 3 10, 4 1 0, S_0x5636a7b6d600;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "result"
+    .port_info 1 /INPUT 1 "a"
+    .port_info 2 /INPUT 1 "b"
+L_0x5636a7b98bd0 .functor XOR 1, L_0x5636a7b98c40, L_0x5636a7b98d30, C4<0>, C4<0>;
+v0x5636a7b97200_0 .net "a", 0 0, L_0x5636a7b98c40;  1 drivers
+v0x5636a7b972e0_0 .net "b", 0 0, L_0x5636a7b98d30;  1 drivers
+v0x5636a7b973a0_0 .net "result", 0 0, L_0x5636a7b98bd0;  1 drivers
+S_0x5636a7b974c0 .scope module, "b56" "pg2bit" 3 11, 4 1 0, S_0x5636a7b6d600;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "result"
+    .port_info 1 /INPUT 1 "a"
+    .port_info 2 /INPUT 1 "b"
+L_0x5636a7b98e00 .functor XOR 1, L_0x5636a7b98ea0, L_0x5636a7b98f90, C4<0>, C4<0>;
+v0x5636a7b97730_0 .net "a", 0 0, L_0x5636a7b98ea0;  1 drivers
+v0x5636a7b97810_0 .net "b", 0 0, L_0x5636a7b98f90;  1 drivers
+v0x5636a7b978d0_0 .net "result", 0 0, L_0x5636a7b98e00;  1 drivers
+S_0x5636a7b979f0 .scope module, "b58" "pg2bit" 3 15, 4 1 0, S_0x5636a7b6d600;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "result"
+    .port_info 1 /INPUT 1 "a"
+    .port_info 2 /INPUT 1 "b"
+L_0x5636a7b99690 .functor XOR 1, L_0x5636a7b99960, L_0x5636a7b99ac0, C4<0>, C4<0>;
+v0x5636a7b97c10_0 .net "a", 0 0, L_0x5636a7b99960;  1 drivers
+v0x5636a7b97cf0_0 .net "b", 0 0, L_0x5636a7b99ac0;  1 drivers
+v0x5636a7b97db0_0 .net "result", 0 0, L_0x5636a7b99690;  1 drivers
+S_0x5636a7b97f00 .scope module, "b78" "pg2bit" 3 12, 4 1 0, S_0x5636a7b6d600;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "result"
+    .port_info 1 /INPUT 1 "a"
+    .port_info 2 /INPUT 1 "b"
+L_0x5636a7b990c0 .functor XOR 1, L_0x5636a7b99130, L_0x5636a7b99220, C4<0>, C4<0>;
+v0x5636a7b98120_0 .net "a", 0 0, L_0x5636a7b99130;  1 drivers
+v0x5636a7b98200_0 .net "b", 0 0, L_0x5636a7b99220;  1 drivers
+v0x5636a7b982c0_0 .net "result", 0 0, L_0x5636a7b990c0;  1 drivers
+    .scope S_0x5636a7b6df00;
+T_0 ;
+    %pushi/vec4 153, 0, 8;
+    %store/vec4 v0x5636a7b986f0_0, 0, 8;
+    %delay 20, 0;
+    %pushi/vec4 224, 0, 8;
+    %store/vec4 v0x5636a7b986f0_0, 0, 8;
+    %end;
+    .thread T_0;
+    .scope S_0x5636a7b6df00;
+T_1 ;
+    %vpi_call 2 17 "$monitor", $time, "input = %b  ;  output = %b ", v0x5636a7b986f0_0, v0x5636a7b987e0_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "pg8bit_tb.v";
+    "./pg8bit.v";
+    "./pg2bit.v";
