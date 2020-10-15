@@ -1,0 +1,23 @@
+ISim log file
+Running: /home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/array_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/array_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /array/a 1110001110010 -radix bin
+/array/a: Array length and the input lengths are different
+
+# isim force add /array/b 0000000000000010 -radix bin
+# isim force add /array/b 0000000000000010 -radix bin
+# run 1.00ns
+# isim force add /array/a 1111000011110000 -radix bin
+# isim force add /array/a 1111000011110000 -radix bin
+# run 1.00ns
+# isim force add /array/a 0000000000000010 -radix bin
+# isim force add /array/a 0000000000000010 -radix bin
+# run 1.00ns
+# exit 0

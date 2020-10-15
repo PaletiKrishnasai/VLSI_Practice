@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/array.xst" -ofn "/home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/array.syr" 

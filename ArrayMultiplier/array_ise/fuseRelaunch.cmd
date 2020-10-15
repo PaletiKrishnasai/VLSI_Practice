@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/array_isim_beh.exe" -prj "/home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/array_beh.prj" "work.array" "work.glbl" 

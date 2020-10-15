@@ -1,0 +1,25 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/array_isim_beh.exe -prj /home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/array_beh.prj work.array work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/../am.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "/home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/../am.v" Line 71: Size mismatch in connection of port <Cin>. Formal port size is 1-bit while actual signal size is 0-bit.
+Completed static elaboration
+Fuse Memory Usage: 83240 KB
+Fuse CPU Usage: 1060 ms
+Compiling module FullAdder
+Compiling module FullAdder4bit
+Compiling module FullAdder16bit
+Compiling module FullAdder32bit
+Compiling module array
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 Verilog Units
+Built simulation executable /home/paleti/VLSI_LAB/ArrayMultiplier/array_ise/array_isim_beh.exe
+Fuse Memory Usage: 1171452 KB
+Fuse CPU Usage: 1120 ms
+GCC CPU Usage: 1930 ms

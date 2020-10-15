@@ -1,0 +1,378 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: array.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "array.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "array"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : array
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/paleti/VLSI_LAB/ArrayMultiplier/am.v" into library work
+Parsing verilog file "/home/paleti/VLSI_LAB/ArrayMultiplier/FullAdder.v" included at line 1.
+Parsing module <FullAdder>.
+Parsing module <array>.
+Parsing module <FullAdder4bit>.
+Parsing module <FullAdder16bit>.
+Parsing module <FullAdder32bit>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <array>.
+
+Elaborating module <FullAdder32bit>.
+
+Elaborating module <FullAdder16bit>.
+
+Elaborating module <FullAdder4bit>.
+
+Elaborating module <FullAdder>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <array>.
+    Related source file is "/home/paleti/VLSI_LAB/ArrayMultiplier/am.v".
+        N = 16
+        M = 16
+INFO:Xst:3210 - "/home/paleti/VLSI_LAB/ArrayMultiplier/am.v" line 71: Output port <Cout> of the instance <S[15].FA> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <array> synthesized.
+
+Synthesizing Unit <FullAdder32bit>.
+    Related source file is "/home/paleti/VLSI_LAB/ArrayMultiplier/am.v".
+    Summary:
+	no macro.
+Unit <FullAdder32bit> synthesized.
+
+Synthesizing Unit <FullAdder16bit>.
+    Related source file is "/home/paleti/VLSI_LAB/ArrayMultiplier/am.v".
+    Summary:
+	no macro.
+Unit <FullAdder16bit> synthesized.
+
+Synthesizing Unit <FullAdder4bit>.
+    Related source file is "/home/paleti/VLSI_LAB/ArrayMultiplier/am.v".
+    Summary:
+	no macro.
+Unit <FullAdder4bit> synthesized.
+
+Synthesizing Unit <FullAdder>.
+    Related source file is "/home/paleti/VLSI_LAB/ArrayMultiplier/FullAdder.v".
+    Summary:
+Unit <FullAdder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 960
+ 1-bit xor2                                            : 960
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Xors                                                 : 960
+ 1-bit xor2                                            : 960
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <array> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block array, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : array.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 553
+#      LUT2                        : 197
+#      LUT4                        : 97
+#      LUT6                        : 259
+# IO Buffers                       : 64
+#      IBUF                        : 32
+#      OBUF                        : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  553  out of  63400     0%  
+    Number used as Logic:               553  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    553
+   Number with an unused Flip Flop:     553  out of    553   100%  
+   Number with an unused LUT:             0  out of    553     0%  
+   Number of fully used LUT-FF pairs:     0  out of    553     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          64
+ Number of bonded IOBs:                  64  out of    210    30%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 30.204ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2554598054976 / 32
+-------------------------------------------------------------------------
+Delay:               30.204ns (Levels of Logic = 45)
+  Source:            a<2> (PAD)
+  Destination:       p<31> (PAD)
+
+  Data Path: a<2> to p<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   0.001   0.486  a_2_IBUF (a_2_IBUF)
+     LUT2:I0->O            2   0.097   0.698  w<18>1 (w<18>)
+     LUT6:I0->O            3   0.097   0.566  S[1].FA/FA160/FA40/FA3/Mxor_sum_xo<0>1 (S[1].sout<3>)
+     LUT4:I0->O            2   0.097   0.515  S[2].FA/FA160/FA40/FA3/cout1 (S[2].FA/FA160/carry3)
+     LUT6:I3->O            3   0.097   0.566  S[2].FA/FA160/FA41/FA0/Mxor_sum_xo<0>1 (S[2].sout<4>)
+     LUT4:I0->O            2   0.097   0.560  S[3].FA/FA160/FA41/FA0/cout1 (S[3].FA/FA160/FA41/carry0)
+     LUT6:I2->O            3   0.097   0.566  S[3].FA/FA160/FA41/FA1/Mxor_sum_xo<0>1 (S[3].sout<5>)
+     LUT4:I0->O            2   0.097   0.560  S[4].FA/FA160/FA41/FA1/cout1 (S[4].FA/FA160/FA41/carry1)
+     LUT6:I2->O            3   0.097   0.566  S[4].FA/FA160/FA41/FA2/Mxor_sum_xo<0>1 (S[4].sout<6>)
+     LUT4:I0->O            2   0.097   0.560  S[5].FA/FA160/FA41/FA2/cout1 (S[5].FA/FA160/FA41/carry2)
+     LUT6:I2->O            3   0.097   0.566  S[5].FA/FA160/FA41/FA3/Mxor_sum_xo<0>1 (S[5].sout<7>)
+     LUT4:I0->O            2   0.097   0.560  S[6].FA/FA160/FA41/FA3/cout1 (S[6].FA/FA160/carry7)
+     LUT6:I2->O            3   0.097   0.566  S[6].FA/FA160/FA42/FA0/Mxor_sum_xo<0>1 (S[6].sout<8>)
+     LUT4:I0->O            2   0.097   0.560  S[7].FA/FA160/FA42/FA0/cout1 (S[7].FA/FA160/FA42/carry0)
+     LUT6:I2->O            3   0.097   0.566  S[7].FA/FA160/FA42/FA1/Mxor_sum_xo<0>1 (S[7].sout<9>)
+     LUT4:I0->O            2   0.097   0.698  S[8].FA/FA160/FA42/FA1/cout1 (S[8].FA/FA160/FA42/carry1)
+     LUT6:I0->O            3   0.097   0.566  S[8].FA/FA160/FA42/FA2/cout1 (S[8].FA/FA160/FA42/carry2)
+     LUT4:I0->O            2   0.097   0.560  S[8].FA/FA160/FA42/FA3/cout1 (S[8].FA/FA160/carry11)
+     LUT6:I2->O            2   0.097   0.383  S[8].FA/FA160/FA43/FA0/Mxor_sum_xo<0>1 (S[8].sout<12>)
+     LUT4:I2->O            2   0.097   0.698  S[9].FA/FA160/FA43/FA0/Mxor_sum_xo<0>1 (S[9].sout<12>)
+     LUT6:I0->O            3   0.097   0.566  S[10].FA/FA160/FA43/FA0/Mxor_sum_xo<0>1 (S[10].sout<12>)
+     LUT4:I0->O            2   0.097   0.697  S[11].FA/FA160/FA43/FA0/cout1 (S[11].FA/FA160/FA43/carry0)
+     LUT6:I0->O            3   0.097   0.566  S[11].FA/FA160/FA43/FA1/cout1 (S[11].FA/FA160/FA43/carry1)
+     LUT4:I0->O            2   0.097   0.698  S[11].FA/FA160/FA43/FA2/cout1 (S[11].FA/FA160/FA43/carry2)
+     LUT6:I0->O            2   0.097   0.698  S[11].FA/FA160/FA43/FA3/cout1 (S[11].FA/carry15)
+     LUT6:I0->O            3   0.097   0.693  S[11].FA/FA161/FA40/FA0/Mxor_sum_xo<0>1 (S[11].sout<16>)
+     LUT6:I1->O            2   0.097   0.698  S[12].FA/FA161/FA40/FA0/cout1 (S[12].FA/FA161/FA40/carry0)
+     LUT6:I0->O            3   0.097   0.566  S[12].FA/FA161/FA40/FA1/cout1 (S[12].FA/FA161/FA40/carry1)
+     LUT4:I0->O            2   0.097   0.698  S[12].FA/FA161/FA40/FA2/cout1 (S[12].FA/FA161/FA40/carry2)
+     LUT6:I0->O            3   0.097   0.566  S[12].FA/FA161/FA40/FA3/cout1 (S[12].FA/FA161/carry3)
+     LUT4:I0->O            2   0.097   0.698  S[12].FA/FA161/FA41/FA0/cout1 (S[12].FA/FA161/FA41/carry0)
+     LUT6:I0->O            3   0.097   0.566  S[12].FA/FA161/FA41/FA1/cout1 (S[12].FA/FA161/FA41/carry1)
+     LUT4:I0->O            2   0.097   0.698  S[12].FA/FA161/FA41/FA2/cout1 (S[12].FA/FA161/FA41/carry2)
+     LUT6:I0->O            3   0.097   0.566  S[12].FA/FA161/FA41/FA3/cout1 (S[12].FA/FA161/carry7)
+     LUT4:I0->O            2   0.097   0.697  S[12].FA/FA161/FA42/FA0/cout1 (S[12].FA/FA161/FA42/carry0)
+     LUT6:I0->O            2   0.097   0.561  S[12].FA/FA161/FA42/FA1/cout1 (S[12].FA/FA161/FA42/carry1)
+     LUT6:I2->O            3   0.097   0.693  S[12].FA/FA161/FA42/FA2/Mxor_sum_xo<0>1 (S[12].sout<26>)
+     LUT6:I1->O            2   0.097   0.561  S[13].FA/FA161/FA42/FA2/cout1 (S[13].FA/FA161/FA42/carry2)
+     LUT6:I2->O            3   0.097   0.521  S[13].FA/FA161/FA42/FA3/Mxor_sum_xo<0>1 (S[13].sout<27>)
+     LUT4:I1->O            2   0.097   0.561  S[14].FA/FA161/FA42/FA3/cout1 (S[14].FA/FA161/carry11)
+     LUT6:I2->O            2   0.097   0.561  S[14].FA/FA161/FA43/FA0/Mxor_sum_xo<0>1 (S[14].sout<28>)
+     LUT4:I0->O            2   0.097   0.697  S[15].FA/FA161/FA43/FA0/cout1 (S[15].FA/FA161/FA43/carry0)
+     LUT6:I0->O            2   0.097   0.561  S[15].FA/FA161/FA43/FA1/cout1 (S[15].FA/FA161/FA43/carry1)
+     LUT6:I2->O            1   0.097   0.279  S[15].FA/FA161/FA43/FA2/cout1 (p_31_OBUF)
+     OBUF:I->O                 0.000          p_31_OBUF (p<31>)
+    ----------------------------------------
+    Total                     30.204ns (4.172ns logic, 26.032ns route)
+                                       (13.8% logic, 86.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.27 secs
+ 
+--> 
+
+
+Total memory usage is 487204 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
+
